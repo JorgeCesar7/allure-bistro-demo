@@ -1,0 +1,80 @@
+@font-face{font-family:'Bodoni Moda';src:url(fonts/bodoni-500.woff2) format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Bodoni Moda';src:url(fonts/bodoni-400i.woff2) format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'Instrument Sans';src:url(fonts/instrument-400.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Instrument Sans';src:url(fonts/instrument-600.woff2) format('woff2');font-weight:600;font-display:swap}
+/* Radios: botones y chips 999px; paneles e imágenes 20px. Un solo acento: merlot. */
+:root{--bg:#E7EAE3;--panel:#F3F4F0;--ink:#1E2420;--muted:#525A54;--accent:#6B1E2C;--accent-hover:#842839;--on-accent:#FFFFFF;--line:#C9CEC3;--leader:#9C8A6A;--r:20px}
+@media (prefers-color-scheme:dark){:root{--bg:#171B18;--panel:#212622;--ink:#ECEEE9;--muted:#AEB5AE;--accent:#D98C9A;--accent-hover:#E7A6B2;--on-accent:#1A0F12;--line:#363C37;--leader:#7D725E}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 'Instrument Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit} img{display:block;max-width:100%;height:auto}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.demo{background:var(--panel);color:var(--muted);font-size:13px;text-align:center;padding:8px 16px;border-bottom:1px solid var(--line)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;height:76px}
+.logo{font:500 26px/1 'Bodoni Moda',serif;text-decoration:none;white-space:nowrap}
+.logo small{display:block;font:400 11px/1 'Instrument Sans',sans-serif;letter-spacing:2.5px;color:var(--muted);margin-top:5px}
+.nav{display:flex;gap:26px;font-size:15px}
+.nav a{text-decoration:none;color:var(--muted)} .nav a[aria-current]{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:999px;font:600 15px/1 'Instrument Sans',sans-serif;text-decoration:none;border:1.5px solid var(--ink);white-space:nowrap}
+.btn.solid{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.solid:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding:40px 0 80px;min-height:calc(100dvh - 120px)}
+.hero h1{font:500 clamp(56px,7.4vw,104px)/.98 'Bodoni Moda',serif;letter-spacing:-1.5px;max-width:9.5ch}
+.hero p{max-width:28em;color:var(--muted);font-size:19px;margin:24px 0 32px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.arch{border-radius:999px 999px var(--r) var(--r);overflow:hidden;aspect-ratio:3/4;background:var(--panel)}
+.arch img{width:100%;height:100%;object-fit:cover}
+section{padding:88px 0}
+h2{font:500 clamp(36px,4.6vw,56px)/1.06 'Bodoni Moda',serif;max-width:16em}
+.intro{color:var(--muted);max-width:34em;margin-top:14px}
+.dishes{display:grid;grid-template-columns:repeat(3,1fr);gap:36px 28px;margin-top:44px}
+.dish figure{border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;background:var(--panel);margin-bottom:16px}
+.dish figure img{width:100%;height:100%;object-fit:cover}
+.dish.text{border-top:1px solid var(--line);padding-top:16px;align-self:start}
+.row{display:flex;align-items:baseline;gap:10px}
+.row h3{font:500 22px/1.25 'Bodoni Moda',serif}
+.leader{flex:1;border-bottom:1px dotted var(--leader);transform:translateY(-5px);min-width:16px}
+.p{font-weight:600;color:var(--accent);white-space:nowrap}
+.d{color:var(--muted);font-size:15px;margin-top:4px}
+.cat{font-size:13px;color:var(--muted);margin-bottom:2px}
+.more{margin-top:40px}
+.celebra{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:40px;border-top:1px solid var(--line)}
+.celebra div{padding:24px 24px 8px 0}
+.celebra b{display:block;font:italic 400 26px/1.2 'Bodoni Moda',serif;margin-bottom:6px}
+.celebra p{color:var(--muted);font-size:16px}
+.quotes{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:44px}
+blockquote{font:italic 400 30px/1.25 'Bodoni Moda',serif;padding-bottom:4px}
+blockquote cite{display:block;font:400 14px/1.4 'Instrument Sans',sans-serif;font-style:normal;color:var(--muted);margin-top:14px}
+.visit{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;margin-top:44px;align-items:start}
+dl{display:grid;grid-template-columns:120px 1fr;gap:16px 20px}
+dt{color:var(--muted);font-size:15px} dd{font-size:16px}
+.map{border:0;width:100%;aspect-ratio:4/3;border-radius:var(--r);background:var(--panel)}
+footer{padding:36px 0 40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.mhead{padding-top:40px;padding-bottom:20px}
+.mhead h1{font:500 clamp(52px,7vw,88px)/1 'Bodoni Moda',serif}
+.mhead p{color:var(--muted);max-width:34em;margin-top:14px}
+.chips{position:sticky;top:0;z-index:4;background:var(--bg);border-bottom:1px solid var(--line);overflow-x:auto;padding:12px 0;scrollbar-width:none}
+.chips .wrap{display:flex;gap:8px;width:max-content;max-width:none}
+.chips a{text-decoration:none;font-size:14px;padding:9px 15px;border:1px solid var(--line);border-radius:999px;background:var(--panel);white-space:nowrap}
+.msec{padding:44px 0 4px;scroll-margin-top:72px}
+.msec h2{font-size:clamp(30px,4vw,40px);margin-bottom:6px}
+.mlist{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
+.mlist .item{padding:16px 0;border-top:1px solid var(--line)}
+.note{font-size:14px;color:var(--muted);padding:36px 0 0}
+.order{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+@media (max-width:860px){
+ .nav{display:none}
+ .hero{grid-template-columns:1fr;gap:32px;padding:20px 0 56px;min-height:0}
+ .arch{max-width:420px;aspect-ratio:4/5}
+ .dishes{grid-template-columns:1fr 1fr;gap:28px 16px}
+ .celebra,.quotes,.visit,.mlist{grid-template-columns:1fr}
+ .celebra div{padding:20px 0 4px}
+ .quotes{gap:32px} .visit{gap:32px}
+ section{padding:60px 0}
+ blockquote{font-size:24px}
+}
+@media (max-width:520px){.wrap{padding:0 16px}.dishes{grid-template-columns:1fr}.top .btn{padding:0 16px}dl{grid-template-columns:96px 1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
